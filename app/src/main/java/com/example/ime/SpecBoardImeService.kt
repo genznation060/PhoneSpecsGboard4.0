@@ -49,11 +49,11 @@ class SpecBoardImeService : InputMethodService(), LifecycleOwner, ViewModelStore
                 decorView.setViewTreeLifecycleOwner(this@SpecBoardImeService)
                 decorView.setViewTreeViewModelStoreOwner(this@SpecBoardImeService)
                 decorView.setViewTreeSavedStateRegistryOwner(this@SpecBoardImeService)
-            } else {
-                setViewTreeLifecycleOwner(this@SpecBoardImeService)
-                setViewTreeViewModelStoreOwner(this@SpecBoardImeService)
-                setViewTreeSavedStateRegistryOwner(this@SpecBoardImeService)
             }
+
+            setViewTreeLifecycleOwner(this@SpecBoardImeService)
+            setViewTreeViewModelStoreOwner(this@SpecBoardImeService)
+            setViewTreeSavedStateRegistryOwner(this@SpecBoardImeService)
 
             setContent {
                 SpecBoardTheme(darkTheme = true) {
