@@ -20,16 +20,19 @@ jobs:
 
       - name: Install Gradle
         run: |
-          wget -q https://services.gradle.org/distributions/gradle-8.2-bin.zip
-          unzip -q gradle-8.2-bin.zip -d $HOME/gradle
-          echo "$HOME/gradle/gradle-8.2/bin" >> $GITHUB_PATH
+          wget -q https://services.gradle.org/distributions/gradle-9.3.1-bin.zip
+          unzip -q gradle-9.3.1-bin.zip -d $HOME/gradle
+          echo "$HOME/gradle/gradle-9.3.1/bin" >> $GITHUB_PATH
+
+      - name: Create Dummy .env
+        run: |
+          echo "GEMINI_API_KEY=dummy_key_for_build" > .env
 
       - name: Build APK
-        working-directory: PhoneSpecsGboard
         run: gradle assembleDebug --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: PhoneSpecsGboard-APK
-          path: PhoneSpecsGboard/app/build/outputs/apk/debug/app-debug.apk
+          name: SpecBoard-APK
+          path: app/build/outputs/apk/debug/app-debug.apk

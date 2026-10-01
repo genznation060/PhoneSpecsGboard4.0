@@ -1,0 +1,6 @@
+{
+  "name": "SpecBoard",
+  "description": "Smartphone TSV Database & Spec Clipboard Manager with integrated custom InputMethodService keyboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
