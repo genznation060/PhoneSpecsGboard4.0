@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'PhoneSpecsGboard-AndroidProject.zip'
+      - 'PhoneSpecsGboard-Updated.zip'
       - '.github/workflows/build-apk.yml'
 
 jobs:
